@@ -21,7 +21,9 @@ resumeVar = "ResumeInfo.json"
 with open(resumeVar, "r") as JSONFile:
     ResumeInfo = json.loads(JSONFile.read())
 
-
+name = ResumeInfo["FullName"]
+age = ResumeInfo["Age"]
+gender = ResumeInfo["Gender"]
 
 
 
