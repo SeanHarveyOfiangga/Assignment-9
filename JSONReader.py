@@ -24,7 +24,10 @@ with open(resumeVar, "r") as JSONFile:
 name = ResumeInfo["FullName"]
 age = ResumeInfo["Age"]
 gender = ResumeInfo["Gender"]
-
+school1 = ResumeInfo["PrimarySchool"]
+school2 = ResumeInfo["SecondarySchool"]
+school3 = ResumeInfo["TertiarySchool"]
+school4 = ResumeInfo["CollegeUniv"]
 
 
 
