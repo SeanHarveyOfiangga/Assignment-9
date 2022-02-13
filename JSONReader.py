@@ -71,7 +71,15 @@ resume.cell(0, 23,"Tertiary Education      : " + str(ResumeInfo["TertiarySchool"
 resume.cell(0, -10,"College Education       : " + str(ResumeInfo["CollegeUniv"]), align='L', ln=True)
 resume.line(10, 105, 210, 105)
 
-
+resume.set_font('Helvetica', 'B', 18)
+resume.cell(0, 40, "ACHIEVEMENTS",  align='L', ln=True)
+resume.set_font('courier', '', 13)
+resume.cell(0, -21,"A. " + str(ResumeInfo["Achievement1"]), align='L', ln=True)
+resume.cell(0, 35,"B. " + str(ResumeInfo["Achievement2"]), align='L', ln=True)
+resume.cell(0, -21,"C. " + str(ResumeInfo["Achievement3"]), align='L', ln=True)
+resume.cell(0, 35,"D. " + str(ResumeInfo["Achievement4"]), align='L', ln=True)
+resume.cell(0, -21,"E. " + str(ResumeInfo["Achievement5"]), align='L', ln=True)
+resume.line(10, 156, 210, 156)
 
 
 
