@@ -49,7 +49,11 @@ resume.add_page()
 resume.image('ResumeBG.JPG', x = -0.5, y= -0.5, w = resume.w + 1)
 resume.image('Pic.JPG', 10, 13, 40, 0)
 
-
+resume.set_font('Helvetica', 'B', 30)
+resume.set_text_color(0,0,0)
+resume.set_margins(top=20, left=20, right=20)
+resume.cell(0, 0, "PERSONAL RESUME",  align='C', ln=True)
+resume.line(55, 30, 210, 30)
 
 
 
