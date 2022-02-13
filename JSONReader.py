@@ -55,7 +55,12 @@ resume.set_margins(top=20, left=20, right=20)
 resume.cell(0, 0, "PERSONAL RESUME",  align='C', ln=True)
 resume.line(55, 30, 210, 30)
 
-
+resume.set_font('Times', '', 15)
+resume.set_text_color(0,0,0)
+resume.cell(0, 35,"                          Complete Name       : " + str(ResumeInfo["FullName"]), align='L', ln=True)
+resume.cell(0, -20,"                          Age                          : " + str(ResumeInfo["Age"]), align='L', ln=True)
+resume.cell(0, 35,"                          Gender                     : " + str(ResumeInfo["Gender"]), align='L', ln=True)
+resume.line(50, 61, 210, 61)
 
 
 
