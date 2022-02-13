@@ -92,5 +92,10 @@ resume.cell(0, -30,"E. " + str(ResumeInfo["Skills5"]), align='L', ln=True)
 resume.cell(0, 45,"F. " + str(ResumeInfo["Skills6"]), align='L', ln=True)
 resume.line(10, 218, 210, 218)
 
-
+resume.set_font('Helvetica', 'B', 18)
+resume.cell(0, -15, "CONTACT",  align='L', ln=True)
+resume.set_font('courier', '', 13)
+resume.cell(0, 30,"Email : " + str(ResumeInfo["email"]), align='L', ln=True)
+resume.cell(0, -19,"Cellphone Number : " + str(ResumeInfo["PhoneNum"]), align='L', ln=True)
+resume.cell(0, 30,"Address : " + str(ResumeInfo["address"]), align='L', ln=True)
 
