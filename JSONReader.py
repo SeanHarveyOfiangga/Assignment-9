@@ -81,7 +81,16 @@ resume.cell(0, 35,"D. " + str(ResumeInfo["Achievement4"]), align='L', ln=True)
 resume.cell(0, -21,"E. " + str(ResumeInfo["Achievement5"]), align='L', ln=True)
 resume.line(10, 156, 210, 156)
 
-
+resume.set_font('Helvetica', 'B', 18)
+resume.cell(0, 50, "SKILLS",  align='L', ln=True)
+resume.set_font('courier', '', 13)
+resume.cell(0, -30,"A. " + str(ResumeInfo["Skills1"]), align='L', ln=True)
+resume.cell(0, 45,"B. " + str(ResumeInfo["Skills2"]), align='L', ln=True)
+resume.cell(0, -30,"C. " + str(ResumeInfo["Skills3"]), align='L', ln=True)
+resume.cell(0, 45,"D. " + str(ResumeInfo["Skills4"]), align='L', ln=True)
+resume.cell(0, -30,"E. " + str(ResumeInfo["Skills5"]), align='L', ln=True)
+resume.cell(0, 45,"F. " + str(ResumeInfo["Skills6"]), align='L', ln=True)
+resume.line(10, 218, 210, 218)
 
 
 
