@@ -33,7 +33,13 @@ achievement2 = ResumeInfo["Achievement2"]
 achievement3 = ResumeInfo["Achievement3"]
 achievement4 = ResumeInfo["Achievement4"]
 achievement5 = ResumeInfo["Achievement5"]
-
+skill1 = ResumeInfo["Skills1"]
+skill2 = ResumeInfo["Skills2"]
+skill3 = ResumeInfo["Skills3"]
+skill4 = ResumeInfo["Skills4"]
+skill5 = ResumeInfo["Skills5"]
+skill6 = ResumeInfo["Skills6"]
+skill7 = ResumeInfo["Skills7"]
 
 
 
