@@ -44,7 +44,10 @@ number = ResumeInfo["PhoneNum"]
 email = ResumeInfo["email"]
 address = ResumeInfo["address"]
 
-
+resume = FPDF('P', 'mm', 'Letter')
+resume.add_page()
+resume.image('ResumeBG.JPG', x = -0.5, y= -0.5, w = resume.w + 1)
+resume.image('Pic.JPG', 10, 13, 40, 0)
 
 
 
