@@ -62,7 +62,14 @@ resume.cell(0, -20,"                          Age                          : " +
 resume.cell(0, 35,"                          Gender                     : " + str(ResumeInfo["Gender"]), align='L', ln=True)
 resume.line(50, 61, 210, 61)
 
-
+resume.set_font('Helvetica', 'B', 18)
+resume.cell(0, -5, "EDUCATIONAL ATTAINMENT",  align='L', ln=True)
+resume.set_font('courier', '', 13)
+resume.cell(0, 23,"Primary Education       : " + str(ResumeInfo["PrimarySchool"]), align='L', ln=True)
+resume.cell(0, -10,"Secondary Education     : " + str(ResumeInfo["SecondarySchool"]), align='L', ln=True)
+resume.cell(0, 23,"Tertiary Education      : " + str(ResumeInfo["TertiarySchool"]), align='L', ln=True)
+resume.cell(0, -10,"College Education       : " + str(ResumeInfo["CollegeUniv"]), align='L', ln=True)
+resume.line(10, 105, 210, 105)
 
 
 
