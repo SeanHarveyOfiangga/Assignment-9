@@ -28,7 +28,11 @@ school1 = ResumeInfo["PrimarySchool"]
 school2 = ResumeInfo["SecondarySchool"]
 school3 = ResumeInfo["TertiarySchool"]
 school4 = ResumeInfo["CollegeUniv"]
-
+achievement1 = ResumeInfo["Achievement1"]
+achievement2 = ResumeInfo["Achievement2"]
+achievement3 = ResumeInfo["Achievement3"]
+achievement4 = ResumeInfo["Achievement4"]
+achievement5 = ResumeInfo["Achievement5"]
 
 
 
