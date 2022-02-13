@@ -40,7 +40,9 @@ skill4 = ResumeInfo["Skills4"]
 skill5 = ResumeInfo["Skills5"]
 skill6 = ResumeInfo["Skills6"]
 skill7 = ResumeInfo["Skills7"]
-
+number = ResumeInfo["PhoneNum"]
+email = ResumeInfo["email"]
+address = ResumeInfo["address"]
 
 
 
