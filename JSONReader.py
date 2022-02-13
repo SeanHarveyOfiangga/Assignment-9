@@ -19,83 +19,84 @@ from fpdf import FPDF
 
 resumeVar = "ResumeInfo.json"
 with open(resumeVar, "r") as JSONFile:
-    ResumeInfo = json.loads(JSONFile.read())
+    ResumeInfo = json.loads(JSONFile.read())    #JSON file opener and import
 
 name = ResumeInfo["FullName"]
-age = ResumeInfo["Age"]
+age = ResumeInfo["Age"]                         #Personal info
 gender = ResumeInfo["Gender"]
 school1 = ResumeInfo["PrimarySchool"]
-school2 = ResumeInfo["SecondarySchool"]
+school2 = ResumeInfo["SecondarySchool"]         #Educational attainment
 school3 = ResumeInfo["TertiarySchool"]
 school4 = ResumeInfo["CollegeUniv"]
 achievement1 = ResumeInfo["Achievement1"]
 achievement2 = ResumeInfo["Achievement2"]
-achievement3 = ResumeInfo["Achievement3"]
+achievement3 = ResumeInfo["Achievement3"]       #Achievements
 achievement4 = ResumeInfo["Achievement4"]
 achievement5 = ResumeInfo["Achievement5"]
 skill1 = ResumeInfo["Skills1"]
 skill2 = ResumeInfo["Skills2"]
 skill3 = ResumeInfo["Skills3"]
-skill4 = ResumeInfo["Skills4"]
+skill4 = ResumeInfo["Skills4"]                  #Skills
 skill5 = ResumeInfo["Skills5"]
 skill6 = ResumeInfo["Skills6"]
 skill7 = ResumeInfo["Skills7"]
 number = ResumeInfo["PhoneNum"]
-email = ResumeInfo["email"]
+email = ResumeInfo["email"]                     #contacts
 address = ResumeInfo["address"]
 
-resume = FPDF('P', 'mm', 'Letter')
+resume = FPDF('P', 'mm', 'Letter')      #FPDF creation
 resume.add_page()
-resume.image('ResumeBG.JPG', x = -0.5, y= -0.5, w = resume.w + 1)
-resume.image('Pic.JPG', 10, 13, 40, 0)
+resume.image('ResumeBG.JPG', x = -0.5, y= -0.5, w = resume.w + 1)       #Background pic
+resume.image('Pic.JPG', 10, 13, 40, 0)                                  #2x2 pic
 
-resume.set_font('Helvetica', 'B', 30)
-resume.set_text_color(0,0,0)
-resume.set_margins(top=20, left=20, right=20)
-resume.cell(0, 0, "PERSONAL RESUME",  align='C', ln=True)
-resume.line(55, 30, 210, 30)
+resume.set_font('Helvetica', 'B', 30)                           #font
+resume.set_text_color(0,0,0)                                    #text color
+resume.set_margins(top=20, left=20, right=20)                   #margins
+resume.cell(0, 0, "PERSONAL RESUME",  align='C', ln=True)       #Title
+resume.line(55, 30, 210, 30)                                    #line divider
 
-resume.set_font('Times', '', 15)
+resume.set_font('Times', '', 15)                                #font
 resume.set_text_color(0,0,0)
 resume.cell(0, 35,"                          Complete Name       : " + str(ResumeInfo["FullName"]), align='L', ln=True)
-resume.cell(0, -20,"                          Age                          : " + str(ResumeInfo["Age"]), align='L', ln=True)
+resume.cell(0, -20,"                          Age                          : " + str(ResumeInfo["Age"]), align='L', ln=True)    #personal infos strings
 resume.cell(0, 35,"                          Gender                     : " + str(ResumeInfo["Gender"]), align='L', ln=True)
-resume.line(50, 61, 210, 61)
+resume.line(50, 61, 210, 61)                #line divider
 
-resume.set_font('Helvetica', 'B', 18)
-resume.cell(0, -5, "EDUCATIONAL ATTAINMENT",  align='L', ln=True)
-resume.set_font('courier', '', 13)
+resume.set_font('Helvetica', 'B', 18)           #font
+resume.cell(0, -5, "EDUCATIONAL ATTAINMENT",  align='L', ln=True)    #Title   
+resume.set_font('courier', '', 13)              #font
 resume.cell(0, 23,"Primary Education       : " + str(ResumeInfo["PrimarySchool"]), align='L', ln=True)
-resume.cell(0, -10,"Secondary Education     : " + str(ResumeInfo["SecondarySchool"]), align='L', ln=True)
+resume.cell(0, -10,"Secondary Education     : " + str(ResumeInfo["SecondarySchool"]), align='L', ln=True)       #educational infos strings
 resume.cell(0, 23,"Tertiary Education      : " + str(ResumeInfo["TertiarySchool"]), align='L', ln=True)
 resume.cell(0, -10,"College Education       : " + str(ResumeInfo["CollegeUniv"]), align='L', ln=True)
-resume.line(10, 105, 210, 105)
+resume.line(10, 105, 210, 105)       #line divider
 
-resume.set_font('Helvetica', 'B', 18)
-resume.cell(0, 40, "ACHIEVEMENTS",  align='L', ln=True)
-resume.set_font('courier', '', 13)
+resume.set_font('Helvetica', 'B', 18)           #font
+resume.cell(0, 40, "ACHIEVEMENTS",  align='L', ln=True)        #Title   
+resume.set_font('courier', '', 13)              #font
 resume.cell(0, -21,"A. " + str(ResumeInfo["Achievement1"]), align='L', ln=True)
 resume.cell(0, 35,"B. " + str(ResumeInfo["Achievement2"]), align='L', ln=True)
-resume.cell(0, -21,"C. " + str(ResumeInfo["Achievement3"]), align='L', ln=True)
+resume.cell(0, -21,"C. " + str(ResumeInfo["Achievement3"]), align='L', ln=True)         #achievements infos strings
 resume.cell(0, 35,"D. " + str(ResumeInfo["Achievement4"]), align='L', ln=True)
 resume.cell(0, -21,"E. " + str(ResumeInfo["Achievement5"]), align='L', ln=True)
-resume.line(10, 156, 210, 156)
+resume.line(10, 156, 210, 156)      #line divider
 
-resume.set_font('Helvetica', 'B', 18)
-resume.cell(0, 50, "SKILLS",  align='L', ln=True)
-resume.set_font('courier', '', 13)
+resume.set_font('Helvetica', 'B', 18)      #font     
+resume.cell(0, 50, "SKILLS",  align='L', ln=True)       #Title 
+resume.set_font('courier', '', 13)          #font
 resume.cell(0, -30,"A. " + str(ResumeInfo["Skills1"]), align='L', ln=True)
 resume.cell(0, 45,"B. " + str(ResumeInfo["Skills2"]), align='L', ln=True)
-resume.cell(0, -30,"C. " + str(ResumeInfo["Skills3"]), align='L', ln=True)
+resume.cell(0, -30,"C. " + str(ResumeInfo["Skills3"]), align='L', ln=True)          #Skills infos strings
 resume.cell(0, 45,"D. " + str(ResumeInfo["Skills4"]), align='L', ln=True)
 resume.cell(0, -30,"E. " + str(ResumeInfo["Skills5"]), align='L', ln=True)
 resume.cell(0, 45,"F. " + str(ResumeInfo["Skills6"]), align='L', ln=True)
-resume.line(10, 218, 210, 218)
+resume.line(10, 218, 210, 218)       #line divider
 
-resume.set_font('Helvetica', 'B', 18)
-resume.cell(0, -15, "CONTACT",  align='L', ln=True)
-resume.set_font('courier', '', 13)
+resume.set_font('Helvetica', 'B', 18)      #font  
+resume.cell(0, -15, "CONTACT",  align='L', ln=True)     #Title 
+resume.set_font('courier', '', 13)      #font 
 resume.cell(0, 30,"Email : " + str(ResumeInfo["email"]), align='L', ln=True)
-resume.cell(0, -19,"Cellphone Number : " + str(ResumeInfo["PhoneNum"]), align='L', ln=True)
+resume.cell(0, -19,"Cellphone Number : " + str(ResumeInfo["PhoneNum"]), align='L', ln=True)     #contact infos strings
 resume.cell(0, 30,"Address : " + str(ResumeInfo["address"]), align='L', ln=True)
 
+resume.output('OFIANGGA_SEANHARVEY.pdf')        #Saves the codes to a pdf file
